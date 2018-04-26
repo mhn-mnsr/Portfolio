@@ -1,0 +1,4 @@
+/venv/
+secret_settings.py
+*.pyc
+README.md

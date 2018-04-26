@@ -1,0 +1,44 @@
+{% load static %}
+
+<section id="blog">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Blog</h5>
+   			<h1>Check Out My Articles.</h1>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+	<div class="row">
+	<div id="blog-carousal" class="owl-carousel">
+		{% if posts %}
+			{% for post in posts %}
+				<div class="post-list">
+					<div class="row">
+						<div class="col-twelve">
+							<h1 class="title"><a href="blog/{{post.id}}">{{post.post_title}}</a><p class="author">by {{post.created_by.get_full_name}}</p></h1>
+							<p class = "metadata">{{post.created_on}} | 3 likes</p>
+							<p class="body">{{post.brief}}</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		{% else %}
+			<h3 style="padding-bottom: 20px;  text-align:center;">Sorry, No Posts available. Check out soon for more posts</h3>
+		{% endif %}
+
+	</div>
+		<div class="row section-intro">
+   		{% if posts %}
+   		<div class="col-twelve">
+
+			<p><a href="{% url 'home-blog' %}">See All Posts</a></p>
+
+   		</div>
+   		{% endif %}   		
+   	</div> <!-- /section-intro-->
+
+	</div>
+
+	</section> <!-- /poss --> 
