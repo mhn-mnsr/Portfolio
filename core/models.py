@@ -15,7 +15,7 @@ class ContactDetails(models.Model):
 	email = models.CharField(max_length=100)
 	website = models.CharField(max_length=100)
 	phone = models.CharField(max_length=100)
-	mobile = models.CharField(max_length=100)
+	mobile = models.CharField(max_length=100, blank=True)
 	address = models.TextField()
 
 	def __str__(self):
@@ -112,10 +112,10 @@ class Quote(models.Model):
 
 class Project(models.Model):
 	name = models.CharField(max_length=1000)
-	github_url = models.CharField(max_length=1000)
+	github_url = models.CharField(max_length=1000, blank=True)
 	url = models.CharField(max_length=1000)
 	tech = models.CharField(max_length=10000, verbose_name="Technology Stack Used")
-	description = models.TextField()
+	description = models.TextField(blank=True)
 	image = models.FileField(max_length=10000)
 
 	def __str__(self):
