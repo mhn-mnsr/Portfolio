@@ -146,6 +146,12 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+# STATIC_ROOT = 'https://maheenportfolio.s3.amazonaws.com/'
+# STATIC_URL = 'static/'
+# STATIC_URL = S3_URL + 'static/'
+# STATIC_ROOT = STATIC_URL
+
+
 STATICFILES_FINDERS = (
 'django.contrib.staticfiles.finders.FileSystemFinder',
 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
