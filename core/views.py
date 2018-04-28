@@ -44,7 +44,7 @@ def sendEmail(request):
 		message = request.POST.get('contactMessage')
 
 		message = "<" + name + ">" + " has sent you the following message " + "on the subject " + "<" + subject + ">" + " and says the message " + "<" + message + ">" + " his email ID is " + "<" + from_email +">"
-		send_mail(subject, message, 'raazu889@gmail.com', ['rajujha373@gmail.com'], fail_silently=False)
+		send_mail(subject, message, 'mhn1211@gmail.com', ['mhn1211@gmail.com'], fail_silently=False)
 		
 	# #.info(request, 'Your password has been changed successfully!')
 	# context = {
@@ -56,10 +56,10 @@ def sendEmail(request):
 	return redirect('emailSent') #render(request, "home/thankyou.html", context)
 
 def emailSent(request):
-	social = Social.objects.all()
-	context= {
-		'social' : social,
-	}
-	return render(request, "home/thankyou.html", context)
+	# social = Social.objects.all()
+	# context= {
+	# 	'social' : social,
+	# }
+	return render(request, "home/thankyou.html")
 
 
