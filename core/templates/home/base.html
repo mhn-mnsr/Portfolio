@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
 
-   <!--- basic page needs
+  <!--- basic page needs
    ================================================== -->
-   <meta charset="utf-8">
-	<title>{% block title %}{% endblock %} | Maheen Mansoor</title>
-	<meta name="description" content="personal website of Maheen Mansoor">  
-	<meta name="author" content="Maheen Mansoor">
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %} | Maheen Mansoor</title>
+  <meta name="description" content="personal website of Maheen Mansoor">
+  <meta name="author" content="Maheen Mansoor">
 
-   <!-- mobile specific metas
+  <!-- mobile specific metas
    ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
- 	<!-- CSS
+  <!-- CSS
    ================================================== -->
-   {% load static %}
-   <link rel="stylesheet" href="{% static 'home/css/base.css' %}">
-   <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
-   <link rel="stylesheet" href="{% static 'home/css/vendor.css' %}">    
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home/css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/vendor.css' %}">
 
-   <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet"> {% block extrastyles %}{% endblock %}
 
-   {% block extrastyles %}{% endblock %}
+  <!-- script
+   ================================================== -->
+  <script src="{% static 'home/js/modernizr.js' %}"></script>
+  <script src="{% static 'home/js/pace.min.js' %}"></script> {% block extrascripts %}{% endblock %}
 
-   <!-- script
-   ================================================== -->   
-	<script src="{% static 'home/js/modernizr.js' %}"></script>
-	<script src="{% static 'home/js/pace.min.js' %}"></script>
-	{% block extrascripts %}{% endblock %}
-
-   <!-- favicons
+  <!-- favicons
 	================================================== -->
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}"/>
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81820772-4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-81820772-4');
@@ -51,20 +51,19 @@
 
 <body id="top">
 
-	{% block content %}
-	{% endblock %}
+  {% block content %} {% endblock %}
 
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
 
-   <!-- Java Script
-   ================================================== --> 
-   <script src="{% static 'home/js/jquery-2.1.3.min.js' %}"></script>
-   <script src="{% static 'home/js/plugins.js' %}"></script>
-   <script src="{% static 'home/js/main.js' %}"></script>
-   <script src="{% static 'home/js/particle.js' %}"></script>
-   <script src="{% static 'home/js/app.js' %}"></script>
+  <!-- Java Script
+   ================================================== -->
+  <script src="{% static 'home/js/jquery-2.1.3.min.js' %}"></script>
+  <script src="{% static 'home/js/plugins.js' %}"></script>
+  <script src="{% static 'home/js/main.js' %}"></script>
+  <script src="{% static 'home/js/particle.js' %}"></script>
+  <script src="{% static 'home/js/app.js' %}"></script>
 
 </body>
 
