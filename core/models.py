@@ -15,7 +15,6 @@ class ContactDetails(models.Model):
 	email = models.CharField(max_length=100)
 	website = models.CharField(max_length=100, blank= True)
 	phone = models.CharField(max_length=100)
-	mobile = models.CharField(max_length=100, blank = True)
 	address = models.TextField()
 
 	def __str__(self):
